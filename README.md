@@ -12,17 +12,4 @@
     数组中元素的范围是 [-1000, 1000] ，且整数 k 的范围是 [-1e7, 1e7]。
 思路：*本题首先需要的是数组中所有和为k的子数组，其次需要记录此类子数组的个数，用一个计数器来实现
      *要保证找到每一个和为k的子数组，我的方法是两次遍历数组，和冒泡排序有些相似
-int subarraySum(int* nums, int numsSize, int k){
-    int i,j;
-    int sum=0;
-    int n=0;
-    for(i=0;i<numsSize;i++){
-        sum=0;
-        for(j=i;j<numsSize;j++){
-            sum=sum+nums[j];
-            if(sum==k) 
-              n++;
-        }
-    }    
-    return n;
-}
+
